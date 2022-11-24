@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <mrta charset="UTF-8">
+        <mrta http-equive="X-UA-Compatible" content="IE=edge">
+        <mrta name ="viewport" content="wide=device-width, initial-scale=1.0">
+            <title>Shivani Shamkuwar Portfolio</title> <!--webpage name-->
+        </mrta>
+        <link rel="stylesheet" href="style.css">   <!--To link flies together-->
+        <script src="https://kit.fontawesome.com/cdb8889428.js" crossorigin="anonymous"></script>    <!--for link icon-->
+    </head>
+    <body>
+       <div id="header">
+         <div class="container">
+            <nav>
+                <img src="images/shivani-low-resolution-logo-color-on-transparent-background.png" class="logo"> <!--for logo img-->
+                <ul>
+                    <li><a href="#header">Home</a></li>                 <!--for navigation-->
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">                            <!--for main text-->
+                <h1> Hi, I'm <span>Shivani Shamkuwar</span></h1>
+                <p>Electronics and Communication Engineer</p>
+            </div>
+         </div>
+         </div>
+       </div>
+<!--About me page-->       
+       <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">             <!--for right img-->
+                    <img src="images/Me.jpg">
+                </div>  
+                <div class="about-col-1">                   <!--for left text-->
+                    <h1 class="sub-title">About Me:</h1>
+                    <p>Hello, my name is Shivani Shamkuwar, I'm a student. I live in Nagpur and am completing my 
+                        engineering studies at MIT World Peace University in Pune.For the first time, I lived so far away from my hometown, 
+                        and I took up many new hobbies and learned/improved many new skills. Not only that, but I met many people from various 
+                        cities and states and learned about how societies change and behave as a result. I've made a few friends who are genuine and trustworthy.
+                        Now I'm ready to face new challenges and continue to grow.
+                    </p>
+                        <br>
+                        <p>When it comes to studies, I'm more interested in Digital Communication and Computer Networks. 
+                            I became interested in network security as well, and I learned a lot about cyber security and hacking, 
+                            which is a lot of fun to learn. I like how all of these subjects are related to one another and how it works.
+                        </p>
+                        
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Digital Communication</span></li>
+                                <li><span>Computer Networks</span></li>
+                                <li><span>MATLAB</span><br>(Basic)</li>
+                                <li><span>Excel</span><br>(Graphic)</li>
+                                <li><span>Circuit Designing</span><br>(Basic)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>KDK Nagpur Polytechnic</span><br>2018</li>
+                                <li><span>MIT World Peace University</span><br>2021</li>
+                            </ul>
+                        </div>
+                </div>   
+            </div>
+        </div>
+       </div>
+<!-----------Portfolio------>
+         <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title"> My Works:</h1>
+                <div class="worl-list">
+                    <div class="work">
+                        <img src="images/Soil-Moisture.png">
+                        <div class="layer">
+                            <h2> Soil Soisture Sensor</h2>
+                            <a href="#"><i class="fa-sharp fa-solid fa-rocket-launch"></i></a>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/ns.jpg">
+                        <div class="layer">
+                            <h2> Elliptical curve cryptography </h2>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/ica.jpg">
+                        <div class="layer">
+                            <h2>LM386 Audio Amplifier Circuit</h2>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+<!-------------contact-------------->
+         <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                       <h1 class="sub-title">Contact Me:</h1> 
+                       <p>Email: shivaniishamkuwarr@gmail.com</p>
+                       <p>Phone no: 01234456778</p>
+                       <div class="social-icons">
+                        <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></i></a>
+                       </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your email" required>
+                            <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+
+
+       <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+       </script>
+
+    </body>
+</html>
